@@ -1,0 +1,36 @@
+.navbar{
+    background-color: black;
+}
+
+.navbar .container-fluid img{
+    max-width: 10%;
+}
+
+li a{
+    color: white
+}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: white;
+}
+
+.dropdown-menu li a{
+    color: black;
+}
+
+.btn1{
+    background-color:white;
+    margin-right: 30px;
+    font-weight: 700;
+}
+
+.btn2{
+    background-color: #F39048;
+    font-weight: 700;
+    margin-right: 150px;
+}
+
+@media screen and (max-width:765px) {
+    .navbar .container-fluid img{
+        max-width: 15%;
+    }
+}
