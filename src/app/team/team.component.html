@@ -1,0 +1,17 @@
+<app-navbar></app-navbar>
+<section>
+  <div class="container">
+    <div class="CEO">
+      <img src="../../assets/images/certification/certification.jpg" alt="" />
+      <h1>CVS Anirudh</h1>
+      <h4>Founder of Techwing</h4>
+    </div>
+    <div class="Members">
+      <div class="one" *ngFor="let i of Images">
+      <img [src]="i.img" alt="" />
+      <h3>{{i.name}}</h3>
+      <h5>{{i.pos}}</h5>
+    </div>
+  </div>
+  </div>
+</section>

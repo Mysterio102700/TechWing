@@ -1,0 +1,46 @@
+ <section >
+   <app-navbar></app-navbar>
+   <app-loading *ngIf="showspinner"></app-loading>
+   <div class="container">
+      <div class="row">
+         <div class="col-md-12">
+            <div class="card shadow-lg">
+               <div class="card-header" style="background-color: black;">
+                  <img src="../../../assets/png/logo.png" alt="LOGO"/>
+               </div>
+               <div class="card-title">
+                  <ng-container *ngIf="verify && verify.length > 0; else noData">
+                     <h1>{{ verify[0].name }}</h1>
+                     <h3>{{ verify[0].RollNo }}</h3>
+                     <div class="card-desc">
+                        <p>{{ verify[0].Domain }}</p>
+                        <div class="verified-details">
+                           <div class="col-md-4">
+                              <div class="card-title">
+                                 <div class="logo">
+                                    <div class="wrapper">
+                                       <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                                          <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+                                          <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                                       </svg>
+                                    </div>
+                                    <h6>{{ verify[0].tech }}</h6>
+                                 </div>
+                                 <button routerLink="/cerificate/{{ verify[0].id }}" class="btn btn-warning shadow-lg">Generate Certificate</button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </ng-container>
+                  
+                  <ng-template #noData>
+                     <p>No data available.</p>
+                  </ng-template>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+
+ 

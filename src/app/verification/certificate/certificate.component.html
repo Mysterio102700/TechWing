@@ -1,0 +1,91 @@
+<!-- <div #pdfElement class="print-section">
+  <div class="container1">
+    <img src="../../../assets/png/logo.png" [alt]="LOGO" />
+  </div>
+  <div class="matter">
+    <h4>CERTIFICATE OF INTERNSHIP</h4>
+    <h1 class="title">{{ verify.name.toString() | uppercase }}</h1>
+    <h5 class="new2">
+      This is to certify that
+      <span>{{ verify.gender ? "Mr" : "Ms" }} {{ verify.name }} </span> ({{
+        verify.RollNo
+      }}) of {{ verify.branch }}, Godavari Institute Of Engineering And
+      Technology (A) has successfully completed {{ verify.user }} internship
+      with TECHWING from {{ verify.date }}. During the period
+      {{ verify.type }} worked with
+      <span> "{{ verify.Domain.toString() | uppercase }}"</span>,{{
+        verify.type.toString() | titlecase
+      }}
+      has shown great amount of responsibility. We found the student performance
+      and conduct satisfactory.
+    </h5>
+    <div class="bottom">
+      <div class="left">
+        <h6 class="desc">INTERN ID : {{ verify.id }}</h6>
+        <a routerLink="https//:teachingverification.com"
+          >https//:teachingverification.com</a
+        >
+      </div>
+      <div class="right">
+        <img src="../../../assets/images/sign.jpg" alt="" />
+        <h5>CVS ANIRUDH GOUR</h5>
+        <h6 class="new1">Founder & CEO</h6>
+        <h6 class="new1">TECHWING</h6>
+      </div>
+    </div>
+  </div>
+
+  
+</div>
+<button
+  (click)="printSection()"
+  class="print-only shadow-lg"
+  style="margin-left: 45%"
+>
+  Print Section
+</button> -->
+
+<div #pdfElement class="print-section">
+  <div class="container1">
+    <img src="../../../assets/png/logo.png" [alt]="LOGO" />
+  </div>
+  <div class="matter">
+    <h4>CERTIFICATE OF INTERNSHIP</h4>
+    <h1 class="title">{{ verify[0].name.toString() | uppercase }}</h1>
+    <h5 class="new2">
+      This is to certify that
+      <span>{{ verify[0].gender ? "Mr" : "Ms" }} {{ verify[0].name }} </span>
+      ({{ verify[0].RollNo }}) of {{ verify[0].branch }}, Godavari Institute Of
+      Engineering And Technology (A) has successfully completed
+      {{ verify[0].gender ? "his" : "her" }} internship with TECHWING from {{ verify[0].date }}.
+      During the period {{  verify[0].gender ? "he" : "she" }} worked with
+      <span> "{{ verify[0].Domain.toString() | uppercase }}"</span>,{{
+        verify[0].gender ? "he" : "she".toString() | titlecase
+      }}
+      has shown a great amount of responsibility. We found the student's
+      performance and conduct satisfactory.
+    </h5>
+    <div class="bottom">
+      <div class="left">
+        <h6 class="desc">INTERN ID : {{ verify[0].id }}</h6>
+        <a routerLink="https://teachingverification.com"
+          >https://teachingverification.com</a
+        >
+      </div>
+      <div class="right">
+        <img src="../../../assets/images/sign.jpg" alt="" />
+        <h5>CVS ANIRUDH GOUR</h5>
+        <h6 class="new1">Founder & CEO</h6>
+        <h6 class="new1">TECHWING</h6>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button
+  (click)="printSection()"
+  class="print-only shadow-lg"
+  style="margin-left: 45%"
+>
+  Print Section
+</button>

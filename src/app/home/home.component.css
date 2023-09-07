@@ -17,7 +17,7 @@
 
 .container1 .left h3 {
   font-family: "Roboto Mono", monospace;
-  color: #f39048;
+  color: #ffa500;
   margin-top: 20px;
 }
 .container1 .left h1 {
@@ -45,7 +45,7 @@
 }
 
 .btn2 {
-  background-color: #f39048;
+  background-color: #ffa500;
   font-weight: 700;
   margin-right: 150px;
   margin-top: 30px;
@@ -65,7 +65,7 @@
 }
 
 .container2 h4 {
-  color: #f39048;
+  color: #ffa500;
   font-weight: 700;
   font-size: 32px;
   padding-top: 3%;
@@ -95,7 +95,6 @@
 .container2 .l-right h4 {
   font-size: 20px;
   padding-top: 45px;
-  
 }
 .container2 .l-right .CEO {
   margin-left: 20px;
@@ -122,7 +121,7 @@
 }
 .container3 .feature-txt h1 {
   text-align: center;
-  color: #f39048;
+  color: #ffa500;
 }
 
 .container3 .feature-txt h3 {
@@ -139,9 +138,9 @@
 }
 
 .container4 h1 {
-  color: #f39048;
+  color: #ffa500;
   text-align: center;
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 
 .container4 .left {
@@ -164,7 +163,7 @@
   margin-top: 20px;
   border-radius: 25px;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
 }
 .container4 .left .overlay button img {
@@ -175,6 +174,14 @@
   width: 50%;
   padding: 5%;
   text-align: center;
+}
+.container4 .right h4 {
+  text-align: justify;
+  font-weight: 400;
+}
+
+.container4 .right div {
+  margin-bottom: 5%;
 }
 
 .container5 {
@@ -216,6 +223,7 @@
 
 .courses img {
   margin-top: 100px;
+  margin-bottom: 2%;
   height: 250px;
   max-width: 15%;
   border: 2px solid white;
@@ -291,7 +299,7 @@
   }
   .container3 .feature-txt h1 {
     text-align: center;
-    color: #f39048;
+    color: #ffa500;
   }
 
   .container3 .feature-txt h3 {
@@ -307,7 +315,7 @@
   }
 
   .container4 h1 {
-    color: #f39048;
+    color: #ffa500;
   }
 
   .container4 .left {
@@ -331,7 +339,7 @@
     text-align: justify;
   }
 
-  .container4 .left .overlay{
+  .container4 .left .overlay {
     margin-left: -40%;
   }
 
@@ -357,4 +365,23 @@
     max-width: 15%;
     border: 2px solid white;
   }
+}
+
+@media screen and (max-width: 500px) {
+  .container4 .left .overlay button {
+    height: 8%;
+    width: 150px;
+    margin-top: 20px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .container4   .left   .overlay   button   img {
+    margin-right: 5px;
+    max-width: 30%;
+}
+
+
 }

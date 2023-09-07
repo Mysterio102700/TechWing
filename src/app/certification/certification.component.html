@@ -1,0 +1,19 @@
+<app-navbar></app-navbar>
+<section>
+  <div class="container">
+    <div class="left">
+      <h1>Certification</h1>
+      <p>At TechWing, we provide a diverse array of globally recognized certifications. Led by our certified trainers, our programs are tailored to facilitate efficient and educational certification preparation. We offer top certifications from Cisco, Redhat, Amazon, and more. Your path to certification starts here.</p>
+    </div>
+    <div class="right">
+      <img src="../../assets/images/certification/certification.jpg" alt="">
+    </div>
+  </div>
+  <div class="images">
+    <div class="container" >
+      <img  *ngFor="let i of Images" [src]="i.img" alt="">
+    </div>
+
+  </div>
+
+</section>

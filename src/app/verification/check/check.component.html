@@ -1,0 +1,49 @@
+<app-navbar></app-navbar>
+<section>
+  <div class="container">
+    <!-- <div class="row">
+      <div class="col"> -->
+        <div class="card shadow-lg">
+          <div
+            class="card-header">
+            <img src="../../../assets/png/logo.png" alt="LOGO" class="logo" />
+          </div>
+    
+          <div class="card-title">
+            <h1>Certificate Verification Portal</h1>
+            <div class="card-description">
+              <p>
+                Welcome to the TECHWING Certificate Verification Site. This fraud
+                prevention system can be used to verify TECHWING Certificates held
+                by candidates. The Certificate ID can be found on all certificates
+                issued by TECHWING. Upon entering the Certificate ID,
+                authentication details relating to the holder of the Certificate
+                will be presented.
+              </p>
+              <h3>Please enter the details :</h3>
+              <form [formGroup]="checkform">
+                <input
+                class="form-control"
+                  type="text"
+                  formControlName="id"
+                  placeholder="Enter Certificate Id :"
+                  [(ngModel)]="check.id"
+                  name="id"
+                />
+                <button
+                  [routerLink]="'/verify/' + check.id"
+                  type="submit"
+                  class="btn"
+                >
+                  check
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div> 
+    <!-- </div>
+  </div> -->
+</section>
+<router-outlet></router-outlet>
+
