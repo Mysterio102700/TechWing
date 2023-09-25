@@ -3,6 +3,7 @@ section {
   height: 100vh;
   overflow: hidden;
 }
+
 .container1 {
   display: flex;
 }
@@ -14,10 +15,16 @@ section {
   flex-direction: column;
   justify-content: center;
 }
+
 .container1 .left form {
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+label {
+  position: relative;
+  top: 30px;
+  margin-left: 10px;
 }
 
 .container1 .right {
@@ -51,10 +58,12 @@ option {
   color: white;
   background-color: black;
 }
-.form-control{
+
+.form-control {
   border-bottom: 1px solid #ffa500;
   border-radius: 0;
 }
+
 .form-control:focus {
   color: white;
   background-color: transparent;
@@ -63,7 +72,7 @@ option {
   box-shadow: 0 0 0 0.10rem #ffa500;
 }
 
-.courseopt{
+.courseopt {
   color: white;
   position: relative;
 
@@ -78,6 +87,13 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.regbtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
 }
 
 button {
@@ -102,6 +118,7 @@ button:hover {
   color: black;
   /* z-index: -1; */
 }
+
 span {
   transition: all 0.7s;
   z-index: -1;
@@ -124,6 +141,7 @@ button:hover .first {
   color: black;
   z-index: -1;
 }
+
 button .second {
   content: "";
   position: absolute;
@@ -132,6 +150,11 @@ button .second {
   height: 100%;
   width: 25%;
   background-color: #ffa500;
+}
+
+label {
+  color: white;
+  text-align: left;
 }
 
 button:hover .second {
@@ -171,4 +194,31 @@ button .fourth {
 button:hover .fourth {
   top: 0;
   left: 0;
+}
+
+@media screen and (max-width:765px) {
+  .container1 {
+    flex-direction: column-reverse;
+  }
+
+.container1 .left,
+.container1 .right{
+    width: 100%;
+  }
+
+  section{
+    overflow: auto;
+  }
+
+  button{
+    width: 40%;
+  }
+
+  label{
+    margin-bottom: 15px;
+  }
+  .container1  .right {
+   
+    margin-left: 0;
+}
 }

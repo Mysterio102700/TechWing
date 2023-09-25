@@ -2,11 +2,18 @@ section {
   background-color: black;
 }
 
-h1 {
+h1,h3 {
   color: #ffa500;
+  margin-top: 30px;
+  text-align: center;
 }
-h4 {
+h4,h5 {
   color: white;
+  text-align: center;
+}
+
+.container{
+  padding-bottom: 100px;
 }
 .container .CEO {
   display: flex;
@@ -22,7 +29,7 @@ h4 {
 
 .Members {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
     grid-gap: 20px;
 }
@@ -37,7 +44,7 @@ h4 {
 
 @media screen and (max-width:769px) {
     .Members {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         justify-items: center;
     }
 
@@ -55,4 +62,14 @@ h4 {
     .Members img {
         max-width: 50%;
       }
+
+      h1,h3 {
+        font-size: medium !important ;
+
+      }
+      h4,h5 {
+        font-size: smaller;
+      }
+
+
 }

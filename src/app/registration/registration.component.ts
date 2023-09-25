@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Register } from '../models/register';
 import { RegisterService } from '../services/register.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-registration',
@@ -12,9 +13,18 @@ export class RegistrationComponent implements OnInit {
 
   reg: Register = new Register();
 
-  constructor(private service:RegisterService) {}
+  registrationsform: FormGroup; // Declare the form variable
 
-
+  constructor(
+    private service: RegisterService,
+    private formBuilder: FormBuilder
+  ) {
+    this.registrationsform = this.formBuilder.group({
+      Username: ['', [Validators.required, Validators.minLength(6)]], // Example validation rule for Username
+      mobileNumber: ['', Validators.required],
+      // Add other form controls here
+    });
+  }
 
   ngOnInit(): void {
     this.updateImage();
@@ -34,13 +44,8 @@ export class RegistrationComponent implements OnInit {
   }
 
   submit() {
-    this.service.details(this.reg).subscribe((data=>{
-      alert('successfully inserted');  
-    }));
+    this.service.details(this.reg).subscribe((data) => {
+      alert('successfully inserted');
+    });
   }
-
-  
 }
-
-
-

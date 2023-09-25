@@ -1,0 +1,215 @@
+section{
+  background-color: black;
+  height: 100vh;
+}
+
+
+img {
+  max-width: 100%;
+  border-radius: 3px;
+}
+
+.container1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* card.component.css */
+.card {
+  text-align: center;
+  margin: 50px;
+  width: 15%;
+  height: auto;
+  overflow: hidden;
+  background-color: transparent;
+  border: 1px solid gainsboro;
+}
+.card img{
+  max-width: 100%;
+  padding: 10%;
+}
+
+.intro {
+  color: white;
+  height: 70px;
+  width: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  /* background: rgba(27, 27, 27, 0.5);  */
+  background-color: black;
+  transition: .7s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+
+
+
+h1 {
+  font-size: 30px;
+}
+
+p {
+  font-size: 12px;
+  visibility: hidden;
+  opacity: 0;
+  display: none;
+  text-align: center;
+  padding: 15px;
+}
+.card h2{
+  display: none;
+  visibility: hidden;
+  text-align: center;
+}
+
+h2{
+  color: #ffa500;
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+.card:hover .intro {
+  height: 100%;
+  bottom: 0px;
+}
+
+.card:hover p,
+.card:hover h2,
+.card:hover button{
+  opacity: 1;
+  visibility: visible;
+  display: block;
+}
+.card:hover h1 {
+  display: none;
+}
+
+button {
+  border: none;
+  /* padding: 20px 40px; */
+  font-size: 12px;
+  width: 30%;
+  position: relative;
+  background: transparent;
+  color: #ffa500;
+  text-transform: uppercase;
+  border: 3px solid #ffa500;
+  cursor: pointer;
+  transition: all 0.7s;
+  overflow: hidden;
+  border-radius: 100px;
+  z-index: 1;
+  display: none;
+}
+
+button:hover {
+  color: black;
+  /* z-index: -1; */
+}
+span {
+  transition: all 0.7s;
+  z-index: -1;
+}
+
+button .first {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 0;
+  width: 55%;
+  height: 100%;
+  background-color: #ffa500;
+  z-index: -1;
+}
+
+button:hover .first {
+  top: 0;
+  right: 0;
+  color: black;
+  z-index: -1;
+}
+button .second {
+  content: "";
+  position: absolute;
+  left: 25%;
+  top: -100%;
+  height: 100%;
+  width: 25%;
+  background-color: #ffa500;
+}
+
+button:hover .second {
+  top: 0;
+  left: 50%;
+  z-index: -1;
+}
+
+button .third {
+  content: "";
+  position: absolute;
+  left: 50%;
+  height: 100%;
+  top: 100%;
+  width: 25%;
+  background-color: #ffa500;
+  z-index: -1;
+}
+
+button:hover .third {
+  top: 0;
+  left: 25%;
+  z-index: -1;
+}
+
+button .fourth {
+  content: "";
+  position: absolute;
+  left: 100%;
+  top: 0;
+  height: 100%;
+  width: 25%;
+  background-color: #ffa500;
+  z-index: -1;
+}
+
+button:hover .fourth {
+  top: 0;
+  left: 0;
+}
+
+
+@media screen and (max-width: 1200px) {
+  .card {
+      width: calc(33.33% - 20px);
+  }
+
+  .card .intro:hover{
+    overflow: scroll;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .card {
+      width: calc(50% - 20px);
+  }
+
+  section{
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .card {
+      width: 100%;
+      height: 350px;
+  }
+}

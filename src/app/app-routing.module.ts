@@ -9,6 +9,7 @@ import { CheckComponent } from './verification/check/check.component';
 import { VerfiedComponent } from './verification/verfied/verfied.component';
 import { CertificateComponent } from './verification/certificate/certificate.component';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
+import { CoursesComponent } from './courses/courses.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent},
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path:"check",component:CheckComponent},
   {path:"verify/:id",component:VerfiedComponent},
   {path:"cerificate/:id",component:CertificateComponent},
+  {path:"courses",component:CoursesComponent},
   {path:"**",component:PagenotfoundComponent}
 ];
 

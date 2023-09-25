@@ -19,6 +19,7 @@ import { LoadingComponent } from './components/loading/loading.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
+import { CoursesComponent } from './courses/courses.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +36,8 @@ import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.co
     CertificateComponent,
     LoadingComponent,
     FooterComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    CoursesComponent,
   ],
   imports: [
     BrowserModule,

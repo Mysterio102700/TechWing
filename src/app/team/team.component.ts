@@ -9,38 +9,22 @@ export class TeamComponent {
 
   Images=[
     {
-      img:'https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg',
-      name:'ramesh',
-      pos:'full stack'
+      img:'../assets/images/Team/jaggan.jpg',
+      name:'MVD Jagannadham',
+      pos:'AWS DevOps trainers (OPS-HEAD)'
     },
     {
-      img:'https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg',
-      name:'ramesh',
-      pos:'full stack'
+      img:'../assets/images/Team/shiva.jpg',
+      name:'Shiva',
+      pos:'HR'
     },{
-      img:'https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg',
-      name:'ramesh',
-      pos:'full stack'
+      img:'../assets/images/Team/surya.jpg',
+      name:'K Surya Narayana murthy',
+      pos:'Java fullstack /UI/UX Trainer'
     },{
-      img:'https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg',
-      name:'ramesh',
-      pos:'full stack'
-    },{
-      img:'https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg',
-      name:'ramesh',
-      pos:'full stack'
-    },{
-      img:'https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg',
-      name:'ramesh',
-      pos:'full stack'
-    },{
-      img:'https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg',
-      name:'ramesh',
-      pos:'full stack'
-    },{
-      img:'https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg',
-      name:'ramesh',
-      pos:'full stack'
+      img:'../assets/images/Team/mohan.jpg',
+      name:'K.Mohan Reddy',
+      pos:'Aws / RedHat Trainer'
     }
   ]
 

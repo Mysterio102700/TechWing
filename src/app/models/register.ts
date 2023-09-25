@@ -4,4 +4,5 @@ export class Register {
     Mobile!:Number;
     year!: any;
     course!:String;
+    Email!:String;
 }
