@@ -20,6 +20,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 import { CoursesComponent } from './courses/courses.component';
+import { BookingComponent } from './booking/booking.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,6 +39,7 @@ import { CoursesComponent } from './courses/courses.component';
     FooterComponent,
     PagenotfoundComponent,
     CoursesComponent,
+    BookingComponent
   ],
   imports: [
     BrowserModule,

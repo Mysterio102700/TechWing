@@ -10,6 +10,7 @@ import { VerfiedComponent } from './verification/verfied/verfied.component';
 import { CertificateComponent } from './verification/certificate/certificate.component';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 import { CoursesComponent } from './courses/courses.component';
+import { BookingComponent } from './booking/booking.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent},
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path:"verify/:id",component:VerfiedComponent},
   {path:"cerificate/:id",component:CertificateComponent},
   {path:"courses",component:CoursesComponent},
+  {path:"book",component:BookingComponent},
   {path:"**",component:PagenotfoundComponent}
 ];
 

@@ -5,11 +5,9 @@
   padding-top: 50px;
 }
 
-.container1 img {
-  max-width: 100%;
-  margin-bottom: 50px;
+.container1 video {
+  max-width: 60%;
 }
-
 .container1 .left {
   width: 50%;
   padding: 7%;
@@ -30,6 +28,7 @@
 .container1 .right {
   width: 50%;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
@@ -56,26 +55,34 @@
 }
 
 .container2 .left {
-  width: 50%;
+  width: 70%;
   padding: 5%;
 }
 
 .container2 .right {
   width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container2 h4 {
   color: #ffa500;
   font-weight: 700;
-  font-size: 32px;
+  font-size: 50px;
   padding-top: 3%;
-  padding-left: 3%;
+  /* padding-left: 6%; */
+}
+
+.container2 h5{
+  color: #ffa500;
+  font-weight: 700;
+  padding-top: 4%;
 }
 
 .container2 .right img {
-  position: absolute;
-  max-width: 100%;
-  margin-top: 100px;
+  /* position: absolute; */
+  max-width: 60%;
   border-radius: 15px;
 }
 .container-fluid .left h3 {
@@ -96,9 +103,6 @@
   font-size: 20px;
   padding-top: 45px;
 }
-.container2 .l-right .CEO {
-  margin-left: 20px;
-}
 
 .container3 {
   background-color: black;
@@ -109,14 +113,14 @@
   align-items: center;
   justify-content: space-around;
   flex-direction: row;
-  padding-top: 10%;
+  padding-top: 5%;
 }
 
 .container3 .feature-img img {
   max-width: 10%;
 }
 .container3 .feature-txt {
-  margin-top: 100px;
+  margin-top: 50px;
   padding: 3% 20%;
 }
 .container3 .feature-txt h1 {
@@ -148,6 +152,10 @@
   padding-left: 5%;
   margin-top: 5%;
   display: flex;
+}
+
+.container4 .container-fluid .left img{
+  max-width: 100%;
 }
 
 .container4 .left .overlay {
@@ -260,9 +268,6 @@
     font-size: 12px;
   }
 
-  .container2 .l-right h6 {
-    font-size: 10px;
-  }
   .container-fluid h3 {
     font-size: 12px;
     padding: 5px;
@@ -270,7 +275,6 @@
 
   .container2 .left {
     padding: 0;
-    text-align: center;
   }
 
   .container2 .right img {
@@ -291,7 +295,7 @@
     margin-bottom: 10%;
   }
   .container3 .feature-img img {
-    max-width: 15%;
+    max-width: 25%;
   }
   .container3 .feature-txt {
     margin-top: 100px;
@@ -343,6 +347,11 @@
     margin-left: -40%;
   }
 
+
+  .container4 .container-fluid .left img{
+    max-width: 100%;
+  }
+
   .container5 .left5 h3,
   .container5 .right5 h3 {
     font-size: 20px;
@@ -365,12 +374,33 @@
     max-width: 15%;
     border: 2px solid white;
   }
+
+  .container2 h5{
+    font-size: 15px;
+  }
+  .container2 h6{
+    font-size: 10px;
+    padding-left: 5px;
+  }
 }
 
 @media screen and (max-width: 500px) {
 
+  .container1   video {
+    max-width: 90%;
+}
+
   .container2 h4 {
     font-size: 20px;
+  }
+
+  .container2 h5{
+    font-size: 10px;
+    padding-left: 5px;
+  }
+  .container2 h6{
+    font-size: 10px;
+    padding: 5px;
   }
   .container4 .left .overlay button {
     height: 8%;

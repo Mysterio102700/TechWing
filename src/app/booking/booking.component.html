@@ -1,0 +1,175 @@
+<section>
+  <app-navbar></app-navbar>
+  <div class="container1">
+    <div class="left">
+      <h1>Book Now</h1>
+      <form action="" (ngSubmit)="submit()">
+        <input
+          class="form-control"
+          type="text"
+          placeholder="Full Name"
+          [(ngModel)]="book.fullname"
+          [ngModelOptions]="{ standalone: true }"
+        />
+        <input
+          class="form-control"
+          type="text"
+          name=""
+          id=""
+          placeholder="PinNumber"
+          [(ngModel)]="book.pinno"
+          [ngModelOptions]="{ standalone: true }"
+        />
+        <input
+          class="form-control"
+          type="number"
+          name=""
+          id=""
+          placeholder="Mobile Number"
+          [(ngModel)]="book.phone"
+          [ngModelOptions]="{ standalone: true }"
+        />
+        <input
+          class="form-control"
+          type="email"
+          name=""
+          id=""
+          placeholder="Email"
+          [(ngModel)]="book.email"
+          [ngModelOptions]="{ standalone: true }"
+        />
+        <div class="Year">
+          <label>
+            <input
+              type="radio"
+              name="year"
+              [(ngModel)]="book.year"
+              value="1st year"
+            />
+            1st year
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="year"
+              [(ngModel)]="book.year"
+              value="2nd year"
+            />
+            2nd year
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="year"
+              [(ngModel)]="book.year"
+              value="3rd year"
+            />
+            3rd year
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="year"
+              [(ngModel)]="book.year"
+              value="4th year"
+            />
+            4th year
+          </label>
+        </div>
+
+        <div class="Gender">
+          <label>
+            <input
+              type="radio"
+              id="Male"
+              name="Gender"
+              [(ngModel)]="book.Gender"
+              value="Male"
+            />
+            Male
+          </label>
+          <label>
+            <input
+              type="radio"
+              id="Female"
+              name="Gender"
+              [(ngModel)]="book.Gender"
+              value="Female"
+            />
+            Female
+          </label>
+        </div>
+
+        <div class="Size">
+          <label>
+            <input
+              type="radio"
+              id="S"
+              name="Size"
+              [(ngModel)]="book.Size"
+              value="S"
+            />
+            S
+          </label>
+          <label>
+            <input
+              type="radio"
+              id="M"
+              name="Size"
+              [(ngModel)]="book.Size"
+              value="M"
+            />
+            M
+          </label>
+          <label>
+            <input
+              type="radio"
+              id="L"
+              name="Size"
+              [(ngModel)]="book.Size"
+              value="L"
+            />
+            L
+          </label>
+          <label>
+            <input
+              type="radio"
+              id="XL"
+              name="Size"
+              [(ngModel)]="book.Size"
+              value="XL"
+            />
+            XL
+          </label>
+          <label>
+            <input
+              type="radio"
+              id="XXL"
+              name="Size"
+              [(ngModel)]="book.Size"
+              value="XXL"
+            />
+            XXL
+          </label>
+        </div>
+        <div class="regbtn">
+          <button [disabled]="isSubmitting">
+            Book Now
+            <span class="first"></span>
+            <span class="second"></span>
+            <span class="third"></span>
+            <span class="fourth"></span>
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="right">
+      <video
+        src="../../assets/videos/0001-0300.mp4"
+        [autoplay]="true"
+        [muted]="true"
+        [loop]="true"
+      ></video>
+    </div>
+  </div>
+</section>
