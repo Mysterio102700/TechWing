@@ -4,13 +4,47 @@
     <div class="left">
       <h1>Register</h1>
       <form action="" (ngSubmit)="submit()">
-        <input class="form-control" type="text" placeholder="Full Name" [(ngModel)]="reg.fullName" [ngModelOptions]="{standalone: true}"/>
-        <input class="form-control" type="text" name="" id="" placeholder="PinNumber" [(ngModel)]="reg.PinNo" [ngModelOptions]="{standalone: true}"/>
-        <input class="form-control" type="number" name="" id="" placeholder="Mobile Number" [(ngModel)]="reg.Mobile" [ngModelOptions]="{standalone: true}">
-        <input class="form-control" type="email" name="" id="" placeholder="Email" [(ngModel)]="reg.Email" [ngModelOptions]="{standalone: true}">
+        <input
+          class="form-control"
+          type="text"
+          placeholder="Full Name"
+          [(ngModel)]="reg.fullName"
+          [ngModelOptions]="{ standalone: true }"
+        />
+        <input
+          class="form-control"
+          type="text"
+          name=""
+          id=""
+          placeholder="PinNumber"
+          [(ngModel)]="reg.PinNo"
+          [ngModelOptions]="{ standalone: true }"
+        />
+        <input
+          class="form-control"
+          type="number"
+          name=""
+          id=""
+          placeholder="Mobile Number"
+          [(ngModel)]="reg.Mobile"
+          [ngModelOptions]="{ standalone: true }"
+        />
+        <input
+          class="form-control"
+          type="email"
+          name=""
+          id=""
+          placeholder="Email"
+          [(ngModel)]="reg.Email"
+          [ngModelOptions]="{ standalone: true }"
+        />
 
         <label for="">select year</label>
-        <select class="form-control" [(ngModel)]="reg.year" [ngModelOptions]="{standalone:true}">
+        <select
+          class="form-control"
+          [(ngModel)]="reg.year"
+          [ngModelOptions]="{ standalone: true }"
+        >
           <option value="" default disabled selected>select year</option>
           <option value="1st year">1st year</option>
           <option value="2st year">2st year</option>
@@ -19,8 +53,16 @@
         </select>
 
         <label for="">Select Course</label>
-        <select class="form-control" id="courseSelect" (change)="onSelectChange($event)" [(ngModel)]="reg.course" [ngModelOptions]="{standalone: true}" >
-          <option value="register" default disabled selected>Select course</option>
+        <select
+          class="form-control"
+          id="courseSelect"
+          (change)="onSelectChange($event)"
+          [(ngModel)]="reg.course"
+          [ngModelOptions]="{ standalone: true }"
+        >
+          <option value="register" default disabled selected>
+            Select course
+          </option>
           <option value="aws">AWS</option>
           <option value="jfs">Java Full Stack</option>
           <option value="redhat">Redhat</option>
@@ -29,18 +71,21 @@
 
         <div class="regbtn">
           <button [disabled]="isSubmitting">
-          register
-          <span class="first"></span>
-          <span class="second"></span>
-          <span class="third"></span>
-          <span class="fourth"></span>
-        </button>
+            register
+            <span class="first"></span>
+            <span class="second"></span>
+            <span class="third"></span>
+            <span class="fourth"></span>
+          </button>
         </div>
       </form>
     </div>
     <div class="right">
-      <img id="selectedImage" [src]="'../assets/png/'+selectedOption + '.png'" [alt]="'Selected Image: ' + selectedOption">
+      <img
+        id="selectedImage"
+        [src]="'../assets/png/' + selectedOption + '.png'"
+        [alt]="'Selected Image: ' + selectedOption"
+      />
     </div>
   </div>
-  
 </section>

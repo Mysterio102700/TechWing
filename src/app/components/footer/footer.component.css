@@ -107,10 +107,13 @@ ul {
   background: #ff5e14;
 }
 .footer-widget ul li {
-  display: inline-block;
+  /* display: inline-block; */
   /* float: left; */
-  width: 50%;
+  /* width: 50%; */
+  color: #757575;
   margin-bottom: 12px;
+  list-style: none;
+  cursor: pointer;
 }
 .footer-widget ul li a:hover{
   color: #ff5e14;

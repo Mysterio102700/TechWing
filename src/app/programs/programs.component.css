@@ -10,8 +10,12 @@ h1{
     font-weight: 600;
 }
 p{
-    color: white;
+    color: rgb(238, 234, 234);
     text-align: justify;
+    font-size: 14.5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 300;
+
 
 }
 .container1,
@@ -43,6 +47,10 @@ p{
 .left img{
     max-width: 100%;
     padding: 10% 20% 10% 0;
+}
+.right video{
+    max-width: 100%;
+    padding: 10% 0 10% 20%;
 }
 
 @media screen and (max-width:769px) {

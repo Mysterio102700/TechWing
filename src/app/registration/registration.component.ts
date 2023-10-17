@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Register } from '../models/register';
 import { RegisterService } from '../services/register.service';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { HttpClient, HttpResponse } from '@angular/common/http';
 
 
 @Component({
@@ -11,28 +9,18 @@ import { HttpClient, HttpResponse } from '@angular/common/http';
   styleUrls: ['./registration.component.css'],
 })
 export class RegistrationComponent implements OnInit {
-  selectedOption: string = 'register';
-
   reg: Register = new Register();
+  selectedOption: string = 'register';
+  isSubmitting = false;
 
-  registrationsform: FormGroup; 
-
-  constructor(
-    private service: RegisterService,
-    private formBuilder: FormBuilder
-  ) {
-    this.registrationsform = this.formBuilder.group({
-      Username: ['', [Validators.required, Validators.minLength(6)]], // Example validation rule for Username
-      mobileNumber: ['', Validators.required],
-    });
-  }
+  constructor(private service: RegisterService) {}
 
   ngOnInit(): void {
     this.updateImage();
   }
 
-  onSelectChange(event: Event): void {
-    this.selectedOption = (event.target as HTMLSelectElement).value;
+  onSelectChange(event: any): void {
+    this.selectedOption = event.target.value;
     this.updateImage();
   }
 
@@ -40,32 +28,71 @@ export class RegistrationComponent implements OnInit {
     const selectedImage = document.getElementById(
       'selectedImage'
     ) as HTMLImageElement;
-    selectedImage.src = `${this.selectedOption}.png`;
+    selectedImage.src = `../assets/png/${this.selectedOption}.png`;
     selectedImage.alt = `Selected Image: ${this.selectedOption}`;
   }
 
-  isSubmitting = false;
-
-
   submit() {
-    this.service.details(this.reg).subscribe(
-      (response: HttpResponse<any>) => {
-        console.log('Full Response:', response);
-  
-        if (response.status === 201) {
-          alert('Successfully inserted');
-        } else {
-          alert('Something went wrong. Status: ' + response.status);
+    if (this.validateForm()) {
+      this.isSubmitting = true;
+      this.service.details(this.reg).subscribe(
+        (response: any) => {
+          if (response.status === 201) {
+            alert('Successfully inserted');
+          } else {
+            alert('Something went wrong. Status: ' + response.status);
+          }
+          this.isSubmitting = false;
+        },
+        (error: any) => {
+          console.error('Error:', error);
+          alert('An error occurred');
+          this.isSubmitting = false;
         }
-  
-        this.isSubmitting = false; 
-      },
-      (error) => {
-        console.error('Error:', error);
-        alert('An error occurred');
-  
-        this.isSubmitting = false; 
-      }
-    )
+      );
+    }
+  }
+
+  validateForm(): boolean {
+    if (
+      !this.reg.fullName ||
+      this.reg.fullName.length < 5 ||
+      this.reg.fullName.length > 30
+    ) {
+      alert('Full Name must be between 5 and 30 characters.');
+      return false;
+    }
+
+    if (!this.reg.PinNo || this.reg.PinNo.length !== 10) {
+      alert('PIN must be exactly 10 characters.');
+      return false;
+    }
+
+    if (!this.reg.Email || !this.isEmailValid(this.reg.Email.toString())) {
+      alert('Please enter a valid email address.');
+      return false;
+    }
+
+    if (!this.reg.Mobile || this.reg.Mobile.toString().length !== 10) {
+      alert('Mobile Number must be 10 digits long.');
+      return false;
+    }
+
+    if (!this.reg.year) {
+      alert('Year is required.');
+      return false;
+    }
+
+    if (!this.reg.course || this.reg.course === 'register') {
+      alert('Please select a course.');
+      return false;
+    }
+
+    return true;
+  }
+
+  isEmailValid(email: string): boolean {
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    return emailPattern.test(email);
   }
 }

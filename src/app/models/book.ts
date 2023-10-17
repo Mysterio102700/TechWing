@@ -1,6 +1,6 @@
 export class Book {
 
-    id!:number;
+    id!:any;
     fullname!:string;
     pinno!:string;
     email!:string;
@@ -8,4 +8,5 @@ export class Book {
     year!:string;
     Gender!:string;
     Size!:string;
+
 }

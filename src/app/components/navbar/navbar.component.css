@@ -10,6 +10,10 @@
 li a{
     color: white
 }
+
+li a:hover{
+    color:  #ffa500;
+}
 .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
     color: white;
 }

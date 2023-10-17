@@ -11,6 +11,8 @@ import { CertificateComponent } from './verification/certificate/certificate.com
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 import { CoursesComponent } from './courses/courses.component';
 import { BookingComponent } from './booking/booking.component';
+import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
+import { TermsConditionsComponent } from './components/terms-conditions/terms-conditions.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent},
@@ -23,6 +25,8 @@ const routes: Routes = [
   {path:"cerificate/:id",component:CertificateComponent},
   {path:"courses",component:CoursesComponent},
   {path:"book",component:BookingComponent},
+  {path:"Privacy&Policy",component:PrivacyPolicyComponent},
+  {path:"terms&Conditions",component:TermsConditionsComponent},
   {path:"**",component:PagenotfoundComponent}
 ];
 
