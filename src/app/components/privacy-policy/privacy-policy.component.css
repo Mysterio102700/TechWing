@@ -10,6 +10,7 @@ h2{
     color: #ffa500;
     font-size: xx-large;
     text-align: center;
+    padding-top: 2%;
 }
 
 h1{
@@ -21,7 +22,10 @@ h1{
 }
 p{
     color: white;
-    font-size: small;
-    text-align: justify;
-    padding-bottom: 2%;
+    font-size: medium;
+    text-align: center;
+}
+
+ul li{
+    color: aliceblue;
 }

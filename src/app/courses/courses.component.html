@@ -3,20 +3,21 @@
   <!-- card.component.html -->
   <div class="container1">
     <div class="card" *ngFor="let c of courses">
-      <img src={{c.img}} alt="image" />
+      <img src="{{c.img}}" alt="image" />
       <div class="intro">
         <h1>{{c.name}}</h1>
-        <h2><span>₹ </span>{{c.price}}</h2>
-        <p>{{c.description}}</p>
-      <button routerLink="/register">
-        register
-        <span class="first"></span>
-        <span class="second"></span>
-        <span class="third"></span>
-        <span class="fourth"></span>
-      </button>
+        <h2><span>₹</span> {{c.price}}</h2>
+        <ul>
+          <li *ngFor="let desc of c.description">{{desc.toLowerCase()}}</li>
+        </ul>
+        <button routerLink="/register">
+          Register
+          <span class="first"></span>
+          <span class="second"></span>
+          <span class="third"></span>
+          <span class="fourth"></span>
+        </button>
       </div>
-      
     </div>
   </div>
 </Section>
