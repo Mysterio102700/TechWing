@@ -16,6 +16,7 @@ export class BookingComponent {
   registrationsforms!: FormGroup;
   selectedOption: any;
   razorpayKey = 'rzp_test_OunDF3i0kLU8qm';
+  years = ['1st year', '2nd year', '3rd year', '4th year'];
 
   constructor(
     private service: BookserviceService,
@@ -38,7 +39,8 @@ export class BookingComponent {
       this.service.details(this.book).subscribe(
         (response: any) => {
           if (response.status === 201) {
-            alert('Successfully inserted');
+            alert('Successfully Booked');
+            location.reload();
           } else {
             alert('Something went wrong. Status: ' + response.status);
           }
@@ -88,7 +90,6 @@ export class BookingComponent {
       return false;
     }
 
-
     if (!this.book.Size) {
       alert('Please select a course.');
       return false;
@@ -102,39 +103,45 @@ export class BookingComponent {
     return emailPattern.test(email);
   }
 
-  // payNow() {
-  //   const RazorpayOptions = {
-  //     key: this.razorpayKey,
-  //     amount: '100000',
-  //     name: 'Test Transaction',
-  //     description: 'Rs. 500 for test',
-  //     image: '../../assets/png/logo.png',
-  //     currency: 'INR',
-  //     prefill: {
-  //       name: this.book.fullname,
-  //       email: this.book.email,
-  //       contact: this.book.phone,
-  //     },
-  //     handler: (response: { razorpay_payment_id: any; }) => {  
-  //       this.book.id=response.razorpay_payment_id;      
-  //       this.submit();
-  //     },
-  //     theme: {
-  //       color: '#f37254',
-  //     },
-  //     modal: {
-  //       ondismiss: () => {
-  //         console.log('dismissed');
-  //       },
-  //     },
-  //   };
-  //   const successCallback = (paymentid: any) => {
-  //     console.log(paymentid);
-  //   };
-  //   const failureCallback = (e: any) => {
-  //     console.log(e);
-  //   };
+  payNow() {
+    if (this.validateForm()) {
+      const RazorpayOptions = {
+        key: this.razorpayKey,
+        amount: '50000',
+        name: 'Test Transaction',
+        description: 'Rs. 500 for test',
+        image: '../../assets/png/logo.png',
+        currency: 'INR',
+        prefill: {
+          name: this.book.fullname,
+          email: this.book.email,
+          contact: this.book.phone,
+        },
+        handler: (response: { razorpay_payment_id: any }) => {
+          this.book.id = response.razorpay_payment_id;
+          this.submit();
+        },
+        theme: {
+          color: '#f37254',
+        },
+        modal: {
+          ondismiss: () => {
+            console.log('dismissed');
+          },
+        },
+      };
+      const successCallback = (paymentid: any) => {
+        console.log(paymentid);
+      };
+      const failureCallback = (e: any) => {
+        console.log(e);
+      };
 
-  //   Razorpay.open(RazorpayOptions, successCallback, failureCallback);
-  // }
+      Razorpay.open(RazorpayOptions, successCallback, failureCallback);
+    }
+  }
+
+  reload() {
+    location.reload();
+  }
 }

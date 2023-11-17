@@ -38,7 +38,8 @@ export class RegistrationComponent implements OnInit {
       this.service.details(this.reg).subscribe(
         (response: any) => {
           if (response.status === 201) {
-            alert('Successfully inserted');
+            alert('Successfully Registered');
+            location.reload()
           } else {
             alert('Something went wrong. Status: ' + response.status);
           }

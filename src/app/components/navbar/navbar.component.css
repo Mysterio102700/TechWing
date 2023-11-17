@@ -1,35 +1,45 @@
-.navbar{
+.navbar {
     background-color: black;
 }
 
-.navbar .container-fluid img{
+.navbar .container-fluid img {
     max-width: 10%;
     cursor: pointer;
 }
 
-li a{
+li a {
     color: white
 }
 
-li a:hover{
-    color:  #ffa500;
+li a:hover {
+    color: #ffa500;
 }
-.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
     color: white;
 }
 
-.dropdown-menu li a{
+.dropdown-menu li a {
     color: black;
 }
 
-.btn2{
+.btn2 {
     background-color: #ffa500;
     font-weight: 700;
     margin-right: 100px;
 }
 
+/* Custom CSS */
+/* Change the color of the navbar toggle icon bars */
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    background-color: #ff0000;
+    /* Change this color to the desired color */
+}
+
 @media screen and (max-width:765px) {
-    .navbar .container-fluid img{
+    .navbar .container-fluid img {
         max-width: 15%;
     }
 }
